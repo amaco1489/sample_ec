@@ -35,4 +35,11 @@ module Hello
     origins.map! { |url| /#{url}/ }
     config.action_cable.allowed_request_origins = origins
   end
+
+    # Customizing Rails Generators
+    config.generators do |g|
+    g.assets false
+    g.skip_routes true
+    g.test_framework false
+  end
 end
